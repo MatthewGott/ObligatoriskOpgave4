@@ -7,10 +7,12 @@ namespace ObligatoriskOpgave4.Managers
 {
     public class ManagePlayers : IManagePlayers
     {
+        private static int nextID = 0;
+
         private static List<FootballPlayer> playerList = new List<FootballPlayer>() {
-            new FootballPlayer(0, "Søren", 500, 67),
-            new FootballPlayer(1, "Anders", 500, 50),
-            new FootballPlayer(2, "Martin", 500, 34)
+            new FootballPlayer(nextID++, "Søren", 500, 67),
+            new FootballPlayer(nextID++, "Anders", 500, 50),
+            new FootballPlayer(nextID++, "Martin", 500, 34)
     };
 
         public IEnumerable<FootballPlayer> Get() {
@@ -22,6 +24,7 @@ namespace ObligatoriskOpgave4.Managers
         }
 
         public bool Create(FootballPlayer value) {
+            value.ID = nextID++;
             playerList.Add(value);
             return true;
         }
