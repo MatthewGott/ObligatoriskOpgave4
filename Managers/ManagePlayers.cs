@@ -16,7 +16,7 @@ namespace ObligatoriskOpgave4.Managers
     };
 
         public IEnumerable<FootballPlayer> Get() {
-            return new List<FootballPlayer>(playerList);
+            return playerList;
         }
 
         public FootballPlayer Get(int id) {
