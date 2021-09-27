@@ -10,10 +10,10 @@ namespace ObligatoriskOpgave4
 
 
         //Properties of the Class
-        public int ID;
-        public string Name;
-        public int Price;
-        public int ShirtNumber;
+        public int ID {get;set;}
+        public string Name {get;set;}
+        public int Price {get;set;}
+        public int ShirtNumber{get;set;}
 
         //The Constructor for the Class
         public FootballPlayer(int id, string name, int price, int shirtnumber)
